@@ -1,19 +1,30 @@
-**/*.md
-**/.env
-.cache
-assets
+# Ignore Node Modules (Speed Up Build)
 node_modules
-packages/node-dev
 packages/**/node_modules
+
+# Ignore Environment Files
+**/.env
+**/*.env
+
+# Ignore Development Configs
+.vscode
+.git
+.github
+.gitignore
+*.tsbuildinfo
+
+# Ignore Build Outputs
+**/dist
 packages/**/dist
 packages/**/.turbo
 packages/**/*.test.*
-.git
-.github
-!.github/scripts
-*.tsbuildinfo
 packages/cli/dist/**/e2e.*
+
+# Ignore Temporary Cache Files
+.cache
+cypress
 docker/compose
 docker/**/Dockerfile
-.vscode
-cypress
+
+# Ignore Documentation Files
+**/*.md
